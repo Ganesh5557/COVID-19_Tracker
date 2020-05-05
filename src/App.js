@@ -5,7 +5,7 @@ import Chart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 import styles from './App.module.css';
 
-import { fetchdata } from "./api";
+import { fetchCountries } from "./api";
 
 
 
@@ -21,7 +21,7 @@ export default class App extends Component {
     }
 
     async componentDidMount() {
-        const fetdata = await fetchdata();
+        const fetdata = await fetchCountries();
         console.log(fetdata);
         this.setState({ data: fetdata })
 
